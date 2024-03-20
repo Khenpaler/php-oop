@@ -1,0 +1,388 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "problem_1",
+    "dateExported": "2024-03-20T08:55:54.289Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "admin",
+            "containerId": "",
+            "created": "2024-03-20T02:13:10.837Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "5bb0bfd1-ed04-4b5d-833d-7ed631e132b3",
+            "name": "faculty",
+            "containerId": "",
+            "created": "2024-03-20T02:13:17.662Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "4f1405dc-c449-4b2c-8014-7a221ed92349",
+            "name": "student",
+            "containerId": "",
+            "created": "2024-03-20T02:13:55.135Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7c1232c3-3687-4fdc-b2d3-89a1f0984cdd",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "CreateUser",
+            "url": "https://localhost/php-problem1/index.php?admin_action=createUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-13T15:58:57.658Z",
+            "modified": "2024-03-20T02:15:25.986Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "createUser",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "student"
+                    },
+                    {
+                        "name": "password",
+                        "value": "student"
+                    },
+                    {
+                        "name": "roleid",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "01186e25-46b7-445f-987d-93fd96c72f43",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "",
+            "name": "Login",
+            "url": "https://localhost/php-problem1/index.php?authentication=login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-13T15:48:30.547Z",
+            "modified": "2024-03-20T02:51:27.778Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "authentication",
+                    "value": "login",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "admin"
+                    },
+                    {
+                        "name": "password",
+                        "value": "admin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "30edf83c-c4c2-4166-ab40-b925f3b756db",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "DisableUser",
+            "url": "https://localhost/php-problem1/index.php?action=disableUser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-13T16:19:52.338Z",
+            "modified": "2024-03-13T16:34:08.457Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "action",
+                    "value": "disableUser",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userid",
+                        "value": "4"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c3a3f306-52e2-40b8-8910-6f4858c50022",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "",
+            "name": "Logout",
+            "url": "https://localhost/php-problem1/index.php?authentication=logout",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-13T15:48:46.427Z",
+            "modified": "2024-03-20T02:51:34.267Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "authentication",
+                    "value": "logout",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "admin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "bf7dd44b-6bfc-454e-9a01-2fdceb5bb899",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "ViewAllUsers",
+            "url": "https://localhost/php-problem1/index.php?admin_view_all=viewAllUsers",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-13T16:21:52.745Z",
+            "modified": "2024-03-20T01:36:47.190Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_view_all",
+                    "value": "viewAllUsers",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "118ca045-94b9-44f7-880b-dbda8b9f0755",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "changeUserRole",
+            "url": "https://localhost/php-problem1/index.php?admin_action=changeUserRole",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-13T18:05:44.425Z",
+            "modified": "2024-03-20T02:17:01.770Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "changeUserRole",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "userid",
+                        "value": "3"
+                    },
+                    {
+                        "name": "roleid",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "59a0d39d-0528-484d-b39b-6c0aeac32183",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "5bb0bfd1-ed04-4b5d-833d-7ed631e132b3",
+            "name": "createStudent",
+            "url": "https://localhost/php-problem1/index.php?faculty_action=createStudent",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-03-20T02:17:39.213Z",
+            "modified": "2024-03-20T02:18:57.022Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "faculty_action",
+                    "value": "createStudent",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "student1"
+                    },
+                    {
+                        "name": "password",
+                        "value": "student1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1162d5da-bfe3-44a0-afaa-e97e60abdc79",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "5bb0bfd1-ed04-4b5d-833d-7ed631e132b3",
+            "name": "disableStudent",
+            "url": "https://localhost/php-problem1/index.php?faculty_action=disableStudent",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-03-20T02:24:13.141Z",
+            "modified": "2024-03-20T02:25:05.758Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "faculty_action",
+                    "value": "disableStudent",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "student1"
+                    },
+                    {
+                        "name": "password",
+                        "value": "student1",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "332c2401-28f6-4023-9339-a7c87f105b48",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "5bb0bfd1-ed04-4b5d-833d-7ed631e132b3",
+            "name": "updatePassword",
+            "url": "https://localhost/php-problem1/index.php?faculty_action=updateFacultyPassword",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-03-20T02:25:45.555Z",
+            "modified": "2024-03-20T02:26:41.194Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "faculty_action",
+                    "value": "updateFacultyPassword",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "old_password",
+                        "value": "faculty"
+                    },
+                    {
+                        "name": "new_password",
+                        "value": "faculty1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b4714f10-1b83-4a30-9860-81aa80e91724",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "4f1405dc-c449-4b2c-8014-7a221ed92349",
+            "name": "updatePassword",
+            "url": "https://localhost/php-problem1/index.php?student_action=updateStudentPassword",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-03-20T02:31:33.384Z",
+            "modified": "2024-03-20T02:34:05.893Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "student_action",
+                    "value": "updateStudentPassword",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "old_password",
+                        "value": "student"
+                    },
+                    {
+                        "name": "new_password",
+                        "value": "studentNewPass"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2d0059c3-9cb4-4b0a-84ce-95d6740f821f",
+            "colId": "c5578c13-8fb8-4c12-bda5-c7ecc46010fa",
+            "containerId": "8d8d84d6-9021-43ba-b971-db8bc585a352",
+            "name": "createRole",
+            "url": "https://localhost/php-problem1/index.php?admin_action=createRole",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-03-20T02:51:58.573Z",
+            "modified": "2024-03-20T02:53:11.086Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "createRole",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "role",
+                        "value": "engineer"
+                    },
+                    {
+                        "name": "description",
+                        "value": "this is an engineer"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
