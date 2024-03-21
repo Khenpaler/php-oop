@@ -1,0 +1,422 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "problem_2",
+    "dateExported": "2024-03-21T00:24:31.538Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "ea529a73-5e5d-4ba7-ba29-8db35cafa456",
+            "name": "admin",
+            "containerId": "",
+            "created": "2024-03-20T23:40:35.449Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "cashier",
+            "containerId": "",
+            "created": "2024-03-20T23:40:40.047Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "6630d4cc-e1a4-402c-8e8c-485daba43623",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "",
+            "name": "login",
+            "url": "https://localhost/php-problem2/index.php?authentication=login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-20T12:04:29.464Z",
+            "modified": "2024-03-20T23:53:53.783Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "authentication",
+                    "value": "login",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "cashier"
+                    },
+                    {
+                        "name": "password",
+                        "value": "cashier"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1c76e09-173a-42e1-a8e6-8e4da6450f12",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "",
+            "name": "logout",
+            "url": "https://localhost/php-problem2/index.php?authentication=logout",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-20T12:04:34.346Z",
+            "modified": "2024-03-20T12:07:51.135Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "authentication",
+                    "value": "logout",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "admin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "220ddec3-e49d-45f7-8da9-5bff0aa45114",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "ea529a73-5e5d-4ba7-ba29-8db35cafa456",
+            "name": "createUser",
+            "url": "https://localhost/php-problem2/index.php?admin_action=createUser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-20T23:42:18.561Z",
+            "modified": "2024-03-20T23:44:01.880Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "createUser",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "cashier"
+                    },
+                    {
+                        "name": "password",
+                        "value": "cashier"
+                    },
+                    {
+                        "name": "roleid",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "7684f068-b776-4a7f-9b09-9701dc9f9001",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "ea529a73-5e5d-4ba7-ba29-8db35cafa456",
+            "name": "createRole",
+            "url": "https://localhost/php-problem2/index.php?admin_action=createRole",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-20T23:44:38.555Z",
+            "modified": "2024-03-20T23:46:51.924Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "createRole",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "role",
+                        "value": "cashier"
+                    },
+                    {
+                        "name": "description",
+                        "value": "cashier"
+                    },
+                    {
+                        "name": "roleid",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ec88d81a-4155-420d-bcdd-919c5719ffc6",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "ea529a73-5e5d-4ba7-ba29-8db35cafa456",
+            "name": "viewAllUsers",
+            "url": "https://localhost/php-problem2/index.php?admin_view_all=viewAllUsers",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-20T23:48:34.906Z",
+            "modified": "2024-03-20T23:49:07.117Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_view_all",
+                    "value": "viewAllUsers",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "9fd71956-7c33-4458-b3d1-ac227fe00d25",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "createOrder",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=createOrder",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-20T23:50:39.068Z",
+            "modified": "2024-03-21T00:19:31.618Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "createOrder",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Iphone"
+                    },
+                    {
+                        "name": "price",
+                        "value": "20000"
+                    },
+                    {
+                        "name": "customer",
+                        "value": "Kent"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a548ea97-2e6c-4316-bbd6-20eb5ba5e891",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "ea529a73-5e5d-4ba7-ba29-8db35cafa456",
+            "name": "updatePassword",
+            "url": "https://localhost/php-problem2/index.php?admin_action=changeAdminPassword",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-03-20T23:49:20.624Z",
+            "modified": "2024-03-20T23:50:21.442Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "admin_action",
+                    "value": "changeAdminPassword",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "old_password",
+                        "value": "admin123"
+                    },
+                    {
+                        "name": "new_password",
+                        "value": "admin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a1992b10-f591-458a-81a6-ad6ff1669c7a",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "updateOrder",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=updateOrder",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-03-20T23:55:15.359Z",
+            "modified": "2024-03-20T23:56:41.429Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "updateOrder",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "orderid",
+                        "value": "2"
+                    },
+                    {
+                        "name": "name",
+                        "value": "Samsung"
+                    },
+                    {
+                        "name": "price",
+                        "value": "9500"
+                    },
+                    {
+                        "name": "customer",
+                        "value": "Kent"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c09ac6db-05a7-4634-9299-3504e678fe20",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "cancelOrder",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=cancelOrder",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-03-20T23:57:10.352Z",
+            "modified": "2024-03-21T00:06:15.175Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "cancelOrder",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "orderid",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "620418c9-012e-4855-820d-4ea326458847",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "viewCustomerOrders",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=viewCustomerOrders",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-03-21T00:07:13.789Z",
+            "modified": "2024-03-21T00:18:21.558Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "viewCustomerOrders",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "customer",
+                        "value": "Kent"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6e9bc308-2945-47e3-a33c-868bad7be44b",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "totalAmount",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=generateTotalAmountPerCustomer",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-03-21T00:19:44.354Z",
+            "modified": "2024-03-21T00:20:11.188Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "generateTotalAmountPerCustomer",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "customer",
+                        "value": "Kent"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae68facf-b777-44f4-8ff2-aded51ee6a1c",
+            "colId": "60f42ecf-a248-47d4-9896-1bf48ff40161",
+            "containerId": "7ec300c5-3487-4f04-af58-ac8a7b3bd3f5",
+            "name": "updateCashierPassword",
+            "url": "https://localhost/php-problem2/index.php?cashier_action=changeCashierPassword",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-03-21T00:22:50.330Z",
+            "modified": "2024-03-21T00:23:42.859Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cashier_action",
+                    "value": "changeCashierPassword",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "old_password",
+                        "value": "cashier123"
+                    },
+                    {
+                        "name": "new_password",
+                        "value": "cashier"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
